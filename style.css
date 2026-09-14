@@ -21,28 +21,22 @@ li {
     list-style-type: none;
 }
 
-header {
-    margin: 16px;
-}
-
 .container {
     padding: 56px;
 }
 
-.row {
+/* .row {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 
-.search-form {
+/* .search-form {
     display: flex;
     align-items: center;
     margin: 16px auto;
-
-    
-}
-
+} */
+/* this will handle the shape of the submit button */
 #submitButton {
     padding: 8px 16px;
     margin: 16px auto;
@@ -53,7 +47,7 @@ header {
     color: white;
     cursor: pointer;
 }
-
+/* this will handle the shape of the search field */
 input {
     width: 100%;
     max-width: 400px;
@@ -79,7 +73,7 @@ NAVIGATION
     background-position: center -155px;
     background-repeat: no-repeat;
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 
 .nav__container {
@@ -116,36 +110,48 @@ MOVIE RESULTS
 
 */
 
-.search__main {
-    flex: 1;
+.movie {
+    width: 100%;
 }
 
-.movies {
+.movieTitle__Year {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
-
+/* this positions the items on the page */
 .movieResults {
-    width: 75%;
-    padding: 24px;
+    width: 25%;
+    padding: 24px 64px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .movie__title {
     width: 50%;
+    font-size: 12px;
 }
 
-.movie__img--wrapper {
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
+.movie__year {
+    width: 50%;
+    font-size: 12px;
 }
-
 .movie__img {
-    max-height: 380px;
+    max-height: 250px;
     transition: all 300ms ease;
     cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
