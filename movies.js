@@ -3,13 +3,13 @@
 // #######################################################################################
 // this section shows the movie title in the .html file 
 const searchedTitle = document.querySelector('.movie__title');
-const searchInput = document.getElementById('#search-form')
+const searchInput = document.getElementById('.search-form');
 // const search = document.getElementById('searchInput');
 
 searchInput.addEventListener('submit', async (event) => {
     event.preventDefault(); //this will prevent the page from reloadin
 
-    const searchQuery = searchInput.querySelector('input=[name="query"]').value.trim();
+    const searchQuery = searchInput.querySelector('input[name="query"]').value.trim();
 
     if (!searchQuery) return;
 
@@ -17,32 +17,31 @@ searchInput.addEventListener('submit', async (event) => {
 
     try {
         // const apiKey = '2e325618';
-        const response = await fetch(`http://www.omdbapi.com/?s=$(encodeURIComponent(searchQuery))&apikey=2e325618`);
+        const response = await fetch(`http://www.omdbapi.com/?s=$(encodeURIComponent${searchQuery})&apikey=2e325618`);
 
         if (!response.ok) throw new Error('Network response failed');
        
         const data = await response.json();
 
-        if (data.response === 'False') {
-            searchedTitle.innerHTML =  `<P>${DataTransfer.Error}</p>`;
+        if (data.Error === 'False') {
+            searchedTitle.innerHTML = `<p>${data.Error}</p>`;
+            return;
         }
-
-         displayResults(data.Search);
     }
     catch (error) {
         console.error('Fetch error', error);
-        searchedTitle.innerHTML = '<p>Something went wrong.  Please try again</p>';
+        searchedTitle.innerHTML = '<p>Something went wrong.  Please try again.</p>';
     }
 });
 
 function displayResults(items) {
     searchedTitle.innerHTML = items.map(item =>
-        <div class="resultsCard">
+        `<div class="resultsCard">
             <h3>${item.Title} {item.Year}</h3>
             ${item.Poster !== 'N/A' ? `<img src="${item.Poster}" alt="${item.Title}">` : 
             ''}
         </div>
-    ).join('')
+    `).join('')
 }
 
 // fetch(`http://www.omdbapi.com/?s=${reponse}&apikey=${apiKey}`).then((response) => {
