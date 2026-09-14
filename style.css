@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 16px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    margin: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 1000px;
+}
+
+/* #searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 16px auto;
+    display: block;
+    border: 5px solid #ccc;
+    border-radius: 132px;
+} */
+
+/* .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin: 16px auto;
+} */
+
+.search-form {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 16px auto;
+
+    
+}
+
+#submitButton {
+    padding: 8px 16px;
+    margin: 16px auto;
+    display: block;
+    border: none;
+    border-radius: 16px;
+    background-color: #577aa0;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 16px auto;
+    display: block;
+    border: 5px solid #ccc;
+    border-radius: 132px;
+}
+
+/* #searchButton {
+    padding: 8px 16px;
+    margin: 16px auto;
+    display: block;
+    border: none;
+    border-radius: 16px;
+    background-color: #577aa0;
+    color: white;
+    cursor: pointer;
+} */
+
+/*
+
+NAVIGATION
+
+*/
+
+/* nav {
+    display: flex;
+    justify-content: center;
+} */
+
+.nav__section {
+    background-image: url(./assets/akiko-taniguchi-8DIlLbDLpVU-unsplash.jpg); 
+    /* this background will show if the image does not load */
+    background-color: lightgrey;
+    background-size: 100%;
+    /* the background-position centers the image and moves it down -155px */
+    background-position: center -155px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav__links {
+    justify-content: right;
+    margin: 8px;
+    padding: 16px;
+}
+
+.nav__link {
+    padding: 8px;
+}
+
+/*
+
+MAIN
+
+*/
+
+.search__title {
+    /* text-align: ; */
+    padding-left: 150px;
+    margin: 16px;
+    font-size: 24px;
+}
