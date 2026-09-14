@@ -3,7 +3,7 @@
 // #######################################################################################
 // this section shows the movie title in the .html file 
 const searchedTitle = document.querySelector('.movie__title');
-const searchInput = document.getElementById('.search-form');
+const searchInput = document.getElementById('search-form');
 // const search = document.getElementById('searchInput');
 
 searchInput.addEventListener('submit', async (event) => {
@@ -12,12 +12,11 @@ searchInput.addEventListener('submit', async (event) => {
     const searchQuery = searchInput.querySelector('input[name="query"]').value.trim();
 
     if (!searchQuery) return;
-
-    searchedTitle.innerHTML = '<p>Loading...</p>';
+        searchedTitle.innerHTML = '<p>Loading...</p>';
 
     try {
         // const apiKey = '2e325618';
-        const response = await fetch(`http://www.omdbapi.com/?s=$(encodeURIComponent${searchQuery})&apikey=2e325618`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(searchQuery)}&apikey=2e325618`);
 
         if (!response.ok) throw new Error('Network response failed');
        
