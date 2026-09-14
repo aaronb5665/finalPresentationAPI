@@ -37,17 +37,11 @@ searchInput.addEventListener('submit', async (event) => {
 
 function displayResults(items) {
     searchedTitleYear.innerHTML = items.map(item =>
-        `<div class="movieResults">
-            <figure class="movie__img--wrapper">
-                ${item.Poster !== 'N/A' ? `<img class="movie__img" src="${item.Poster}" alt="${item.Title}">` : 
-                ''}
-            </figure>
-            <div class="movie__title">
-                <h3>Title: ${item.Title}</h3>
-            </div>
-            <div class="movie__year">
-                <h3>Year: ${item.Year}</h3>
-            </div>            
+        `<div class="movieResults">            
+                ${item.Poster !== 'N/A' ? `<img src="${item.Poster}" alt="${item.Title}">` : 
+                ''}            
+                <h3>Movie Title: ${item.Title}</h3>            
+                <h3> Movie Year: ${item.Year}</h3>
         </div>
     `).join('')
 }

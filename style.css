@@ -26,31 +26,17 @@ header {
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    max-height: 1000px;
+    padding: 56px;
 }
 
-/* #searchInput {
+.row {
     width: 100%;
-    max-width: 400px;
-    padding: 8px;
-    margin: 16px auto;
-    display: block;
-    border: 5px solid #ccc;
-    border-radius: 132px;
-} */
-
-/* .search-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    margin: 16px auto;
-} */
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .search-form {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     margin: 16px auto;
 
@@ -78,27 +64,11 @@ input {
     border-radius: 132px;
 }
 
-/* #searchButton {
-    padding: 8px 16px;
-    margin: 16px auto;
-    display: block;
-    border: none;
-    border-radius: 16px;
-    background-color: #577aa0;
-    color: white;
-    cursor: pointer;
-} */
-
 /*
 
 NAVIGATION
 
 */
-
-/* nav {
-    display: flex;
-    justify-content: center;
-} */
 
 .nav__section {
     background-image: url(./assets/akiko-taniguchi-8DIlLbDLpVU-unsplash.jpg); 
@@ -138,4 +108,44 @@ MAIN
     padding-left: 150px;
     margin: 16px;
     font-size: 24px;
+}
+
+/* 
+
+MOVIE RESULTS
+
+*/
+
+.search__main {
+    flex: 1;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieResults {
+    width: 75%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.movie__title {
+    width: 50%;
+}
+
+.movie__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.movie__img {
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
 }
