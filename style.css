@@ -10,6 +10,7 @@
 h1 {
     font-size: 32px;
     text-align: center;
+    padding: 16px;
     margin: 16px;
 }
 
@@ -27,21 +28,14 @@ li {
     padding: 56px;
 }
 
-/* .row {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-} */
-
-/* .search-form {
+#search-form {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin: 16px auto;
-} */
+}
 /* this will handle the shape of the submit button */
 #submitButton {
-    padding: 8px 16px;
-    margin: 16px auto;
+    padding: 8px;
     display: block;
     border: none;
     border-radius: 16px;
@@ -54,7 +48,7 @@ input {
     width: 100%;
     max-width: 400px;
     padding: 8px;
-    margin: 16px auto;
+    margin: 4px;
     display: block;
     border: 5px solid #ccc;
     border-radius: 132px;
@@ -76,11 +70,15 @@ NAVIGATION
     background-repeat: no-repeat;
     width: 100%;
     height: 300px;
+    padding: 16px;
+    margin: 16px;
 }
 
 .nav__container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
+    padding: 16px;
+    margin: 16px;
 }
 
 .nav__links {
@@ -98,13 +96,14 @@ NAVIGATION
 MAIN
 
 */
-
-/* .search__mian {
-    flex: 1;
-} */
-
+#search__main {
+    padding: 16px;
+    margin: 16px;
+}
 .search__title {
-    padding-left: 150px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
     margin: 16px;
     font-size: 24px;
 }
@@ -167,26 +166,73 @@ RESIZING FOR SMALL PHONES AND TABLETS
     .movieTitle__Year {
         display: flex;
         flex-wrap: wrap;
-        width: 25%;
+        width: 100%;
     }
-    /* .movie__img--wrapper {
-        display: flex;
-        justify-content: center;
-    } */
-
     
-
 }
 
 @media (max-width: 480px) {
-    h1 {
+
+    /* ul {
+        display: flex;
+        
+    } */
+    #search__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        width: 50%;
-        font-size: 1rem;
+        /* justify-content: center; */
+    }
+
+    #search-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
     }
 
     .search__title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
         text-align: center;
         font-size: 1rem;
     }
+
+    .movieResults {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .movie__title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .movie__year {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav__section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 150px;
+    }
+
+    .nav__section {
+        display: flex;
+        flex-direction: flex-start;
+
+    }
+
+    
 }
